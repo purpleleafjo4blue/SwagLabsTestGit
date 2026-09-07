@@ -1,76 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="4" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-09-02T02:04:51 CST" name="Suite" finished-at="2026-09-02T02:04:57 CST" duration-ms="6385">
+  <suite started-at="2026-09-08T03:33:14 CST" name="Suite" finished-at="2026-09-08T03:33:19 CST" duration-ms="4319">
     <groups>
-      <group name="login">
-        <method signature="LoginValidationTest.ValidateLoginCredentials(java.lang.String,java.lang.String)[pri:0, instance:Test.LoginValidationTest@3daa422a]" name="ValidateLoginCredentials" class="Test.LoginValidationTest"/>
-      </group> <!-- login -->
     </groups>
-    <test started-at="2026-09-02T02:04:51 CST" name="Test" finished-at="2026-09-02T02:04:57 CST" duration-ms="6385">
-      <class name="Test.LoginValidationTest">
-        <test-method is-config="true" signature="goTo()[pri:0, instance:Test.LoginValidationTest@3daa422a]" started-at="2026-09-02T02:04:51 CST" name="goTo" finished-at="2026-09-02T02:04:53 CST" duration-ms="2274" status="PASS">
+    <test started-at="2026-09-08T03:33:14 CST" name="Test" finished-at="2026-09-08T03:33:19 CST" duration-ms="4319">
+      <class name="test.EndToEndTest">
+        <test-method is-config="true" signature="goTo()[pri:0, instance:test.EndToEndTest@9353778]" started-at="2026-09-08T03:33:15 CST" name="goTo" finished-at="2026-09-08T03:33:17 CST" duration-ms="2084" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goTo -->
-        <test-method signature="ValidateLoginCredentials(java.lang.String,java.lang.String)[pri:0, instance:Test.LoginValidationTest@3daa422a]" started-at="2026-09-02T02:04:53 CST" name="ValidateLoginCredentials" data-provider="BasicLoginData" finished-at="2026-09-02T02:04:53 CST" duration-ms="348" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[standard_user]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[secret_sauce]]>
-              </value>
-            </param>
-          </params>
+        <test-method signature="sampleEndToEnd()[pri:0, instance:test.EndToEndTest@9353778]" started-at="2026-09-08T03:33:17 CST" name="sampleEndToEnd" finished-at="2026-09-08T03:33:19 CST" duration-ms="1990" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ValidateLoginCredentials -->
-        <test-method is-config="true" signature="goTo()[pri:0, instance:Test.LoginValidationTest@3daa422a]" started-at="2026-09-02T02:04:53 CST" name="goTo" finished-at="2026-09-02T02:04:55 CST" duration-ms="1574" status="PASS">
+        </test-method> <!-- sampleEndToEnd -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:test.EndToEndTest@9353778]" started-at="2026-09-08T03:33:19 CST" name="closeBrowser" finished-at="2026-09-08T03:33:19 CST" duration-ms="201" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- goTo -->
-        <test-method signature="ValidateLoginCredentials(java.lang.String,java.lang.String)[pri:0, instance:Test.LoginValidationTest@3daa422a]" started-at="2026-09-02T02:04:55 CST" name="ValidateLoginCredentials" data-provider="BasicLoginData" finished-at="2026-09-02T02:04:55 CST" duration-ms="275" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[locked_out_user]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[secret_sauce]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ValidateLoginCredentials -->
-        <test-method is-config="true" signature="goTo()[pri:0, instance:Test.LoginValidationTest@3daa422a]" started-at="2026-09-02T02:04:55 CST" name="goTo" finished-at="2026-09-02T02:04:57 CST" duration-ms="1548" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- goTo -->
-        <test-method signature="ValidateLoginCredentials(java.lang.String,java.lang.String)[pri:0, instance:Test.LoginValidationTest@3daa422a]" started-at="2026-09-02T02:04:57 CST" name="ValidateLoginCredentials" data-provider="BasicLoginData" finished-at="2026-09-02T02:04:57 CST" duration-ms="316" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[problem_user]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[secret_sauce]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ValidateLoginCredentials -->
-      </class> <!-- Test.LoginValidationTest -->
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- test.EndToEndTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>
