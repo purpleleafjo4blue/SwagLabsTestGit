@@ -8,7 +8,7 @@
     	</run>
     </groups>
     <classes>
-      <class name="Test.LoginValidationTest"/>
+      <class name="test.LoginValidationTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
