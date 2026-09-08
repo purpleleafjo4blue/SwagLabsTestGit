@@ -19,7 +19,7 @@ public class BaseTest {
 	{
 		//Initialize GlobalProperties.properties
 		Properties prop = new Properties();
-		String propFilePath = System.getProperty("user.dir") + "//src//main//java//Resources//GlobalData.properties";
+		String propFilePath = System.getProperty("user.dir") + "//src//main//resources//GlobalData.properties";
 		FileInputStream fis = new FileInputStream(propFilePath);
 		prop.load(fis);
 		String browserName;

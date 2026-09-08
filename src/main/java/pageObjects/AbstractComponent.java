@@ -1,13 +1,17 @@
 package pageObjects;
 
-import org.openqa.selenium.By;
+import java.time.Duration;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class AbstractComponent {
 	WebDriver driver;
+	WebDriverWait wait;
 	public AbstractComponent(WebDriver driver)
 	{
 		this.driver = driver;
@@ -25,6 +29,18 @@ public class AbstractComponent {
 	
 	@FindBy(id = "cancel")
 	WebElement cancelButton;
+	
+	public void WaitForElementToBeVisible(WebElement element, int seconds)
+	{
+		wait = new WebDriverWait(driver, Duration.ofSeconds(seconds));
+		wait.until(ExpectedConditions.visibilityOf(element));
+	}
+	
+	public void WaitForElementToBeInvisible(WebElement element, int seconds)
+	{
+		wait = new WebDriverWait(driver, Duration.ofSeconds(seconds));
+		wait.until(ExpectedConditions.invisibilityOf(element));
+	}
 	
 	public void click_BurgerButton()
 	{
