@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">4 suites</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>C:\Users\jo4bl\eclipse-workspace\SwagLabsTest\TestNG XML files\EndToEndTestXML.xml</span>
+                    <span>C:\Users\jo4bl\eclipse-workspace\SwagLabsTest\runners\LoginValidationTestXML.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -60,7 +60,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="group-Suite" class="navigator-link ">
-                    <span>0 groups</span>
+                    <span>1 group</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">3 methods, 1 failed,   2 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="test.LoginValidationTest" class="method navigator-link" hash-for-method="ValidateLoginCredentials(locked_out_user, secret_sauce)">ValidateLoginCredentials(locked_out_user, secret_sauce)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,183 +117,15 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="test.EndToEndTest" class="method navigator-link" hash-for-method="sampleEndToEnd">sampleEndToEnd</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="test.LoginValidationTest" class="method navigator-link" hash-for-method="ValidateLoginCredentials(problem_user, secret_sauce)">ValidateLoginCredentials(problem_user, secret_sauce)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="test.LoginValidationTest" class="method navigator-link" hash-for-method="ValidateLoginCredentials(standard_user, secret_sauce)">ValidateLoginCredentials(standard_user, secret_sauce)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
-                  </li>
-                </ul>
-              </div> <!-- suite-section-content -->
-            </div> <!-- result-section -->
-          </div> <!-- navigator-suite-content -->
-        </div> <!-- rounded-window -->
-      </div> <!-- suite -->
-      <div class="suite">
-        <div class="rounded-window">
-          <div class="suite-header light-rounded-window-top">
-            <a href="#" panel-name="suite-Suite__1_" class="navigator-link">
-              <span class="suite-name border-passed">Suite (1)</span>
-            </a> <!-- navigator-link -->
-          </div> <!-- suite-header light-rounded-window-top -->
-          <div class="navigator-suite-content">
-            <div class="suite-section-title">
-              <span>Info</span>
-            </div> <!-- suite-section-title -->
-            <div class="suite-section-content">
-              <ul>
-                <li>
-                  <a href="#" panel-name="test-xml-Suite__1_" class="navigator-link ">
-                    <span>C:\Users\jo4bl\eclipse-workspace\SwagLabsTest\TestNG XML files\LoginValidationTestXML.xml</span>
-                  </a> <!-- navigator-link  -->
-                </li>
-                <li>
-                  <a href="#" panel-name="testlist-Suite__1_" class="navigator-link ">
-                    <span class="test-stats">1 test</span>
-                  </a> <!-- navigator-link  -->
-                </li>
-                <li>
-                  <a href="#" panel-name="group-Suite__1_" class="navigator-link ">
-                    <span>1 group</span>
-                  </a> <!-- navigator-link  -->
-                </li>
-                <li>
-                  <a href="#" panel-name="times-Suite__1_" class="navigator-link ">
-                    <span>Times</span>
-                  </a> <!-- navigator-link  -->
-                </li>
-                <li>
-                  <a href="#" panel-name="reporter-Suite__1_" class="navigator-link ">
-                    <span>Reporter output</span>
-                  </a> <!-- navigator-link  -->
-                </li>
-                <li>
-                  <a href="#" panel-name="ignored-methods-Suite__1_" class="navigator-link ">
-                    <span>Ignored methods</span>
-                  </a> <!-- navigator-link  -->
-                </li>
-                <li>
-                  <a href="#" panel-name="chronological-Suite__1_" class="navigator-link ">
-                    <span>Chronological view</span>
-                  </a> <!-- navigator-link  -->
-                </li>
-              </ul>
-            </div> <!-- suite-section-content -->
-            <div class="result-section">
-              <div class="suite-section-title">
-                <span>Results</span>
-              </div> <!-- suite-section-title -->
-              <div class="suite-section-content">
-                <ul>
-                  <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Suite__1_" class="hide-methods passed suite-Suite__1_"> (hide)</a> <!-- hide-methods passed suite-Suite__1_ -->
-                      <a href="#" panel-name="suite-Suite__1_" class="show-methods passed suite-Suite__1_"> (show)</a> <!-- show-methods passed suite-Suite__1_ -->
-                    </span>
-                    <div class="method-list-content passed suite-Suite__1_">
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite__1_" title="test.LoginValidationTest" class="method navigator-link" hash-for-method="ValidateLoginCredentials(problem_user, secret_sauce)">ValidateLoginCredentials(problem_user, secret_sauce)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite__1_" title="test.LoginValidationTest" class="method navigator-link" hash-for-method="ValidateLoginCredentials(standard_user, secret_sauce)">ValidateLoginCredentials(standard_user, secret_sauce)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite__1_" title="test.LoginValidationTest" class="method navigator-link" hash-for-method="ValidateLoginCredentials(locked_out_user, secret_sauce)">ValidateLoginCredentials(locked_out_user, secret_sauce)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content passed suite-Suite__1_ -->
-                  </li>
-                </ul>
-              </div> <!-- suite-section-content -->
-            </div> <!-- result-section -->
-          </div> <!-- navigator-suite-content -->
-        </div> <!-- rounded-window -->
-      </div> <!-- suite -->
-      <div class="suite">
-        <div class="rounded-window">
-          <div class="suite-header light-rounded-window-top">
-            <a href="#" panel-name="suite-Suite__0_" class="navigator-link">
-              <span class="suite-name border-passed">Suite (0)</span>
-            </a> <!-- navigator-link -->
-          </div> <!-- suite-header light-rounded-window-top -->
-          <div class="navigator-suite-content">
-            <div class="suite-section-title">
-              <span>Info</span>
-            </div> <!-- suite-section-title -->
-            <div class="suite-section-content">
-              <ul>
-                <li>
-                  <a href="#" panel-name="test-xml-Suite__0_" class="navigator-link ">
-                    <span>C:\Users\jo4bl\eclipse-workspace\SwagLabsTest\TestNG XML files\ItemTestingXML.xml</span>
-                  </a> <!-- navigator-link  -->
-                </li>
-                <li>
-                  <a href="#" panel-name="testlist-Suite__0_" class="navigator-link ">
-                    <span class="test-stats">1 test</span>
-                  </a> <!-- navigator-link  -->
-                </li>
-                <li>
-                  <a href="#" panel-name="group-Suite__0_" class="navigator-link ">
-                    <span>0 groups</span>
-                  </a> <!-- navigator-link  -->
-                </li>
-                <li>
-                  <a href="#" panel-name="times-Suite__0_" class="navigator-link ">
-                    <span>Times</span>
-                  </a> <!-- navigator-link  -->
-                </li>
-                <li>
-                  <a href="#" panel-name="reporter-Suite__0_" class="navigator-link ">
-                    <span>Reporter output</span>
-                  </a> <!-- navigator-link  -->
-                </li>
-                <li>
-                  <a href="#" panel-name="ignored-methods-Suite__0_" class="navigator-link ">
-                    <span>Ignored methods</span>
-                  </a> <!-- navigator-link  -->
-                </li>
-                <li>
-                  <a href="#" panel-name="chronological-Suite__0_" class="navigator-link ">
-                    <span>Chronological view</span>
-                  </a> <!-- navigator-link  -->
-                </li>
-              </ul>
-            </div> <!-- suite-section-content -->
-            <div class="result-section">
-              <div class="suite-section-title">
-                <span>Results</span>
-              </div> <!-- suite-section-title -->
-              <div class="suite-section-content">
-                <ul>
-                  <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Suite__0_" class="hide-methods passed suite-Suite__0_"> (hide)</a> <!-- hide-methods passed suite-Suite__0_ -->
-                      <a href="#" panel-name="suite-Suite__0_" class="show-methods passed suite-Suite__0_"> (show)</a> <!-- show-methods passed suite-Suite__0_ -->
-                    </span>
-                    <div class="method-list-content passed suite-Suite__0_">
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite__0_" title="test.ItemTesting" class="method navigator-link" hash-for-method="addItemToCart">addItemToCart</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite__0_" title="test.ItemTesting" class="method navigator-link" hash-for-method="addMultipleItemsToCart">addMultipleItemsToCart</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content passed suite-Suite__0_ -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -291,24 +137,60 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-passed">
+          <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">test.EndToEndTest</span>
+              <img src="failed.png"/>
+              <span class="class-name">test.LoginValidationTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="sampleEndToEnd">
-                  </a> <!-- sampleEndToEnd -->
-                  <span class="method-name">sampleEndToEnd</span>
+                  <a name="ValidateLoginCredentials(locked_out_user, secret_sauce)">
+                  </a> <!-- ValidateLoginCredentials(locked_out_user, secret_sauce) -->
+                  <span class="method-name">ValidateLoginCredentials</span>
+                  <span class="parameters">(locked_out_user,secret_sauce)</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.className: app_logo&apos;
+(tried for 10 seconds with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at pageObjects.AbstractComponent.WaitForElementToBeVisible(AbstractComponent.java:39)
+	at test.LoginValidationTest.ValidateLoginCredentials(LoginValidationTest.java:31)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.app_logo&quot;}
+  (Session info: chrome=153.0.8010.37)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: &apos;4.48.0&apos;, revision: &apos;27f5213 27f5213055e28398a5105b7892b7a3bb2012a6ef&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [1328c38beb314af2f0c0d77f14918bb8, findElement {value=app_logo, using=class name}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 153.0.8010.37, chrome: {chromedriverVersion: 153.0.8010.36 (507c6ee3e2f3..., userDataDir: C:\Users\jo4bl\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58193}, goog:processID: 11224, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58193/devtoo..., se:cdpVersion: 153.0.8010.37, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1328c38beb314af2f0c0d77f14918bb8
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:143)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:217)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:653)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:173)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:417)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:411)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy12.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:365)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:351)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:348)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:210)
+	... 32 more
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-        </div> <!-- panel Suite -->
-        <div panel-name="suite-Suite__1_" class="panel Suite__1_">
-          <div class="suite-Suite__1_-class-passed">
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
               <span class="class-name">test.LoginValidationTest</span>
@@ -330,70 +212,21 @@
                   <span class="parameters">(standard_user,secret_sauce)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="ValidateLoginCredentials(locked_out_user, secret_sauce)">
-                  </a> <!-- ValidateLoginCredentials(locked_out_user, secret_sauce) -->
-                  <span class="method-name">ValidateLoginCredentials</span>
-                  <span class="parameters">(locked_out_user,secret_sauce)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite__1_-class-passed -->
-        </div> <!-- panel Suite__1_ -->
-        <div panel-name="suite-Suite__0_" class="panel Suite__0_">
-          <div class="suite-Suite__0_-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">test.ItemTesting</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="addItemToCart">
-                  </a> <!-- addItemToCart -->
-                  <span class="method-name">addItemToCart</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="addMultipleItemsToCart">
-                  </a> <!-- addMultipleItemsToCart -->
-                  <span class="method-name">addMultipleItemsToCart</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite__0_-class-passed -->
-        </div> <!-- panel Suite__0_ -->
-        <div panel-name="suite-Master_Regression_tests" class="panel Master_Regression_tests">
-        </div> <!-- panel Master_Regression_tests -->
+          </div> <!-- suite-Suite-class-passed -->
+        </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\jo4bl\eclipse-workspace\SwagLabsTest\TestNG XML files\EndToEndTestXML.xml</span>
+            <span class="header-content">C:\Users\jo4bl\eclipse-workspace\SwagLabsTest\runners\LoginValidationTestXML.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot; verbose=&quot;0&quot;&gt;
-    &lt;classes&gt;
-      &lt;class name=&quot;test.EndToEndTest&quot;/&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Test --&gt;
-&lt;/suite&gt; &lt;!-- Suite --&gt;
-            </pre>
-          </div> <!-- main-panel-content rounded-window-bottom -->
-        </div> <!-- panel -->
-        <div panel-name="test-xml-Suite__1_" class="panel">
-          <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\jo4bl\eclipse-workspace\SwagLabsTest\TestNG XML files\LoginValidationTestXML.xml</span>
-          </div> <!-- main-panel-header rounded-window-top -->
-          <div class="main-panel-content rounded-window-bottom">
-            <pre>
-&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;Suite (1)&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;testComponents.Listeners&quot;/&gt;
+  &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot; verbose=&quot;0&quot;&gt;
     &lt;groups&gt;
       &lt;run&gt;
@@ -404,43 +237,7 @@
       &lt;class name=&quot;test.LoginValidationTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
-&lt;/suite&gt; &lt;!-- Suite (1) --&gt;
-            </pre>
-          </div> <!-- main-panel-content rounded-window-bottom -->
-        </div> <!-- panel -->
-        <div panel-name="test-xml-Suite__0_" class="panel">
-          <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\jo4bl\eclipse-workspace\SwagLabsTest\TestNG XML files\ItemTestingXML.xml</span>
-          </div> <!-- main-panel-header rounded-window-top -->
-          <div class="main-panel-content rounded-window-bottom">
-            <pre>
-&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;Suite (0)&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot; verbose=&quot;0&quot;&gt;
-    &lt;classes&gt;
-      &lt;class name=&quot;test.ItemTesting&quot;/&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Test --&gt;
-&lt;/suite&gt; &lt;!-- Suite (0) --&gt;
-            </pre>
-          </div> <!-- main-panel-content rounded-window-bottom -->
-        </div> <!-- panel -->
-        <div panel-name="test-xml-Master_Regression_tests" class="panel">
-          <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\jo4bl\eclipse-workspace\SwagLabsTest\testng_master.xml</span>
-          </div> <!-- main-panel-header rounded-window-top -->
-          <div class="main-panel-content rounded-window-bottom">
-            <pre>
-&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;Master Regression tests&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
-  &lt;suite-files&gt;
-    &lt;suite-file path=&quot;TestNG XML files\EndToEndTestXML.xml&quot;/&gt;
-    &lt;suite-file path=&quot;TestNG XML files\ItemtestingXML.xml&quot;/&gt;
-    &lt;suite-file path=&quot;TestNG XML files\LoginValidationTestXML.xml&quot;/&gt;
-  &lt;/suite-files&gt;
-&lt;/suite&gt; &lt;!-- Master Regression tests --&gt;
+&lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
@@ -456,49 +253,9 @@
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="testlist-Suite__1_" class="panel">
-          <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Tests for Suite (1)</span>
-          </div> <!-- main-panel-header rounded-window-top -->
-          <div class="main-panel-content rounded-window-bottom">
-            <ul>
-              <li>
-                <span class="test-name">Test (1 class)</span>
-              </li>
-            </ul>
-          </div> <!-- main-panel-content rounded-window-bottom -->
-        </div> <!-- panel -->
-        <div panel-name="testlist-Suite__0_" class="panel">
-          <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Tests for Suite (0)</span>
-          </div> <!-- main-panel-header rounded-window-top -->
-          <div class="main-panel-content rounded-window-bottom">
-            <ul>
-              <li>
-                <span class="test-name">Test (1 class)</span>
-              </li>
-            </ul>
-          </div> <!-- main-panel-content rounded-window-bottom -->
-        </div> <!-- panel -->
-        <div panel-name="testlist-Master_Regression_tests" class="panel">
-          <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Tests for Master Regression tests</span>
-          </div> <!-- main-panel-header rounded-window-top -->
-          <div class="main-panel-content rounded-window-bottom">
-            <ul>
-            </ul>
-          </div> <!-- main-panel-content rounded-window-bottom -->
-        </div> <!-- panel -->
         <div panel-name="group-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">Groups for Suite</span>
-          </div> <!-- main-panel-header rounded-window-top -->
-          <div class="main-panel-content rounded-window-bottom">
-          </div> <!-- main-panel-content rounded-window-bottom -->
-        </div> <!-- panel -->
-        <div panel-name="group-Suite__1_" class="panel">
-          <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Groups for Suite (1)</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="test-group">
@@ -509,20 +266,6 @@
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
-          </div> <!-- main-panel-content rounded-window-bottom -->
-        </div> <!-- panel -->
-        <div panel-name="group-Suite__0_" class="panel">
-          <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Groups for Suite (0)</span>
-          </div> <!-- main-panel-header rounded-window-top -->
-          <div class="main-panel-content rounded-window-bottom">
-          </div> <!-- main-panel-content rounded-window-bottom -->
-        </div> <!-- panel -->
-        <div panel-name="group-Master_Regression_tests" class="panel">
-          <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Groups for Master Regression tests</span>
-          </div> <!-- main-panel-header rounded-window-top -->
-          <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="times-Suite" class="panel">
@@ -539,113 +282,26 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
-data.setCell(0, 0, 0)
-data.setCell(0, 1, 'sampleEndToEnd')
-data.setCell(0, 2, 'test.EndToEndTest')
-data.setCell(0, 3, 1830);
-window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
-return data;
-}
-              </script>
-              <span class="suite-total-time">Total running time: 1 seconds</span>
-              <div id="times-div-Suite">
-              </div> <!-- times-div-Suite -->
-            </div> <!-- times-div -->
-          </div> <!-- main-panel-content rounded-window-bottom -->
-        </div> <!-- panel -->
-        <div panel-name="times-Suite__1_" class="panel">
-          <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Times for Suite (1)</span>
-          </div> <!-- main-panel-header rounded-window-top -->
-          <div class="main-panel-content rounded-window-bottom">
-            <div class="times-div">
-              <script type="text/javascript">
-suiteTableInitFunctions.push('tableData_Suite__1_');
-function tableData_Suite__1_() {
-var data = new google.visualization.DataTable();
-data.addColumn('number', 'Number');
-data.addColumn('string', 'Method');
-data.addColumn('string', 'Class');
-data.addColumn('number', 'Time (ms)');
 data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'ValidateLoginCredentials')
 data.setCell(0, 2, 'test.LoginValidationTest')
-data.setCell(0, 3, 276);
+data.setCell(0, 3, 15869);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'ValidateLoginCredentials')
 data.setCell(1, 2, 'test.LoginValidationTest')
-data.setCell(1, 3, 264);
+data.setCell(1, 3, 400);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'ValidateLoginCredentials')
 data.setCell(2, 2, 'test.LoginValidationTest')
-data.setCell(2, 3, 231);
-window.suiteTableData['Suite__1_']= { tableData: data, tableDiv: 'times-div-Suite__1_'}
+data.setCell(2, 3, 344);
+window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 771 ms</span>
-              <div id="times-div-Suite__1_">
-              </div> <!-- times-div-Suite__1_ -->
-            </div> <!-- times-div -->
-          </div> <!-- main-panel-content rounded-window-bottom -->
-        </div> <!-- panel -->
-        <div panel-name="times-Suite__0_" class="panel">
-          <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Times for Suite (0)</span>
-          </div> <!-- main-panel-header rounded-window-top -->
-          <div class="main-panel-content rounded-window-bottom">
-            <div class="times-div">
-              <script type="text/javascript">
-suiteTableInitFunctions.push('tableData_Suite__0_');
-function tableData_Suite__0_() {
-var data = new google.visualization.DataTable();
-data.addColumn('number', 'Number');
-data.addColumn('string', 'Method');
-data.addColumn('string', 'Class');
-data.addColumn('number', 'Time (ms)');
-data.addRows(2);
-data.setCell(0, 0, 0)
-data.setCell(0, 1, 'addMultipleItemsToCart')
-data.setCell(0, 2, 'test.ItemTesting')
-data.setCell(0, 3, 586);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'addItemToCart')
-data.setCell(1, 2, 'test.ItemTesting')
-data.setCell(1, 3, 512);
-window.suiteTableData['Suite__0_']= { tableData: data, tableDiv: 'times-div-Suite__0_'}
-return data;
-}
-              </script>
-              <span class="suite-total-time">Total running time: 1 seconds</span>
-              <div id="times-div-Suite__0_">
-              </div> <!-- times-div-Suite__0_ -->
-            </div> <!-- times-div -->
-          </div> <!-- main-panel-content rounded-window-bottom -->
-        </div> <!-- panel -->
-        <div panel-name="times-Master_Regression_tests" class="panel">
-          <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Times for Master Regression tests</span>
-          </div> <!-- main-panel-header rounded-window-top -->
-          <div class="main-panel-content rounded-window-bottom">
-            <div class="times-div">
-              <script type="text/javascript">
-suiteTableInitFunctions.push('tableData_Master_Regression_tests');
-function tableData_Master_Regression_tests() {
-var data = new google.visualization.DataTable();
-data.addColumn('number', 'Number');
-data.addColumn('string', 'Method');
-data.addColumn('string', 'Class');
-data.addColumn('number', 'Time (ms)');
-data.addRows(0);
-window.suiteTableData['Master_Regression_tests']= { tableData: data, tableDiv: 'times-div-Master_Regression_tests'}
-return data;
-}
-              </script>
-              <span class="suite-total-time">Total running time: 0 ms</span>
-              <div id="times-div-Master_Regression_tests">
-              </div> <!-- times-div-Master_Regression_tests -->
+              <span class="suite-total-time">Total running time: 16 seconds</span>
+              <div id="times-div-Suite">
+              </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
@@ -656,35 +312,7 @@ return data;
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="reporter-Suite__1_" class="panel">
-          <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Reporter output for Suite (1)</span>
-          </div> <!-- main-panel-header rounded-window-top -->
-          <div class="main-panel-content rounded-window-bottom">
-          </div> <!-- main-panel-content rounded-window-bottom -->
-        </div> <!-- panel -->
-        <div panel-name="reporter-Suite__0_" class="panel">
-          <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Reporter output for Suite (0)</span>
-          </div> <!-- main-panel-header rounded-window-top -->
-          <div class="main-panel-content rounded-window-bottom">
-          </div> <!-- main-panel-content rounded-window-bottom -->
-        </div> <!-- panel -->
-        <div panel-name="reporter-Master_Regression_tests" class="panel">
-          <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Reporter output for Master Regression tests</span>
-          </div> <!-- main-panel-header rounded-window-top -->
-          <div class="main-panel-content rounded-window-bottom">
-          </div> <!-- main-panel-content rounded-window-bottom -->
-        </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
-          <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
-          </div> <!-- main-panel-header rounded-window-top -->
-          <div class="main-panel-content rounded-window-bottom">
-          </div> <!-- main-panel-content rounded-window-bottom -->
-        </div> <!-- panel -->
-        <div panel-name="ignored-methods-Suite__1_" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">1 ignored method</span>
           </div> <!-- main-panel-header rounded-window-top -->
@@ -698,42 +326,7 @@ return data;
             </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="ignored-methods-Suite__0_" class="panel">
-          <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
-          </div> <!-- main-panel-header rounded-window-top -->
-          <div class="main-panel-content rounded-window-bottom">
-          </div> <!-- main-panel-content rounded-window-bottom -->
-        </div> <!-- panel -->
-        <div panel-name="ignored-methods-Master_Regression_tests" class="panel">
-          <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
-          </div> <!-- main-panel-header rounded-window-top -->
-          <div class="main-panel-content rounded-window-bottom">
-          </div> <!-- main-panel-content rounded-window-bottom -->
-        </div> <!-- panel -->
         <div panel-name="chronological-Suite" class="panel">
-          <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Methods in chronological order</span>
-          </div> <!-- main-panel-header rounded-window-top -->
-          <div class="main-panel-content rounded-window-bottom">
-            <div class="chronological-class">
-              <div class="chronological-class-name">test.EndToEndTest</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">goTo</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">sampleEndToEnd</span>
-                <span class="method-start">9508 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">closeBrowser</span>
-                <span class="method-start">11340 ms</span>
-              </div> <!-- configuration-method after -->
-          </div> <!-- main-panel-content rounded-window-bottom -->
-        </div> <!-- panel -->
-        <div panel-name="chronological-Suite__1_" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">Methods in chronological order</span>
           </div> <!-- main-panel-header rounded-window-top -->
@@ -746,76 +339,38 @@ return data;
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">ValidateLoginCredentials(standard_user, secret_sauce)</span>
-                <span class="method-start">3939 ms</span>
+                <span class="method-start">4570 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">4203 ms</span>
+                <span class="method-start">4976 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">goTo</span>
-                <span class="method-start">5279 ms</span>
+                <span class="method-start">5152 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">ValidateLoginCredentials(locked_out_user, secret_sauce)</span>
-                <span class="method-start">9256 ms</span>
+                <span class="method-start">9459 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">9532 ms</span>
+                <span class="method-start">25427 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">goTo</span>
-                <span class="method-start">11197 ms</span>
+                <span class="method-start">25632 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">ValidateLoginCredentials(problem_user, secret_sauce)</span>
-                <span class="method-start">15154 ms</span>
+                <span class="method-start">53339 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">15385 ms</span>
+                <span class="method-start">53684 ms</span>
               </div> <!-- configuration-method after -->
-          </div> <!-- main-panel-content rounded-window-bottom -->
-        </div> <!-- panel -->
-        <div panel-name="chronological-Suite__0_" class="panel">
-          <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Methods in chronological order</span>
-          </div> <!-- main-panel-header rounded-window-top -->
-          <div class="main-panel-content rounded-window-bottom">
-            <div class="chronological-class">
-              <div class="chronological-class-name">test.ItemTesting</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">goTo</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">addItemToCart</span>
-                <span class="method-start">3956 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">closeBrowser</span>
-                <span class="method-start">4469 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">goTo</span>
-                <span class="method-start">5571 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">addMultipleItemsToCart</span>
-                <span class="method-start">9568 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">closeBrowser</span>
-                <span class="method-start">10154 ms</span>
-              </div> <!-- configuration-method after -->
-          </div> <!-- main-panel-content rounded-window-bottom -->
-        </div> <!-- panel -->
-        <div panel-name="chronological-Master_Regression_tests" class="panel">
-          <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Methods in chronological order</span>
-          </div> <!-- main-panel-header rounded-window-top -->
-          <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

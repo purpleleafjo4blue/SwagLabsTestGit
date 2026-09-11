@@ -1,11 +1,14 @@
 package test;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import data.DataReader;
 import pageObjects.CartPage;
 import pageObjects.CheckoutInformationPage;
 import pageObjects.CheckoutOverviewPage;
@@ -14,6 +17,7 @@ import pageObjects.ProductsPage;
 import testComponents.BaseTest;
 
 public class EndToEndTest extends BaseTest{
+	//<--- Tests --->
 	//@Test
 	public void sampleEndToEnd_OriginalCode()
 	{
@@ -49,8 +53,29 @@ public class EndToEndTest extends BaseTest{
 		CartPage cartPage = productsPage.click_CartButton();
 		cartPage.confirmItemNamesAndPrices();
 		CheckoutInformationPage checkInfoPage = cartPage.Checkout();
-		//checkInfoPage.EnterInformation("Alfredo Marquis", "Villegas", "1108");
 		CheckoutOverviewPage checkoutOverviewPage = checkInfoPage.EnterInformationThenProceed("Alfredo Marquis", "Villegas", "1108");
 		checkoutOverviewPage.Finish();
 	}
+	
+	
+	//<--- Data Providers --->
+		@DataProvider(name = "DataFromJson")
+		public Object[][] dataFromJson() throws IOException
+		{
+			String filePath = System.getProperty("user.dir") + "//src//test//java//Data//Data.json";
+			DataReader dataReader = new DataReader();
+			Object[][] result = dataReader.getJsonData(filePath);
+			// create an Object[][] of size [data.size()][1] and populate via a loop
+			return result;
+			
+		}
+		
+		@DataProvider(name = "DataFromExcel")
+		public Object[][] dataFromExcel() throws IOException
+		{
+			String filePath = System.getProperty("user.dir") + "//src//test//java//Data//Data.xlsx";
+			DataReader dataReader = new DataReader();
+			Object[][] result = dataReader.getExcelData(filePath, 0);
+			return result;
+		}
 }

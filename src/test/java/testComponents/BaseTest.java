@@ -1,10 +1,14 @@
 package testComponents;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -78,5 +82,15 @@ public class BaseTest {
 	public void closeBrowser()
 	{
 		driver.quit();
+	}
+	
+	public String getScreenshot(String testCaseName, WebDriver driver) throws IOException
+	{
+		TakesScreenshot ts = (TakesScreenshot) driver;
+		File source = ts.getScreenshotAs(OutputType.FILE);
+		String filePath = System.getProperty("user.dir") + "//reports//" + testCaseName + ".png";
+		File file = new File(filePath);
+		FileUtils.copyFile(source, file); //throws IOException
+		return filePath;
 	}
 }

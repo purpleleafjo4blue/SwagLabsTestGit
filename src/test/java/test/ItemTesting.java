@@ -15,7 +15,7 @@ import pageObjects.ProductsPage;
 import testComponents.BaseTest;
 
 public class ItemTesting extends BaseTest{
-
+	//<--- Tests --->
 	@Test
 	public void addItemToCart()
 	{
@@ -37,6 +37,8 @@ public class ItemTesting extends BaseTest{
 		productsPage.addMultipleItemsToCart(l_shopList);
 	}
 	
+	
+	//<--- Data Providers --->
 	@DataProvider(name = "DataFromJson")
 	public Object[][] dataFromJson() throws IOException
 	{

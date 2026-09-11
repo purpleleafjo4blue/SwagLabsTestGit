@@ -30,6 +30,9 @@ public class AbstractComponent {
 	@FindBy(id = "cancel")
 	WebElement cancelButton;
 	
+	@FindBy(className = "app_logo")
+	public WebElement SwagLabsLogoText;
+	
 	public void WaitForElementToBeVisible(WebElement element, int seconds)
 	{
 		wait = new WebDriverWait(driver, Duration.ofSeconds(seconds));

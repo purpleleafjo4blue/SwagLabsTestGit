@@ -1,15 +1,9 @@
 package test;
 
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.List;
 
-import org.apache.poi.ss.usermodel.DataFormatter;
-import org.apache.poi.xssf.usermodel.XSSFCell;
-import org.apache.poi.xssf.usermodel.XSSFRow;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -18,13 +12,7 @@ import pageObjects.LoginPage;
 import testComponents.BaseTest;
 
 public class LoginValidationTest extends BaseTest{
-	//@Test(dataProvider = "DataFromExcel", groups = {"PracticePrintOutput"})
-	public void PrintOutputTest(String username, String password)
-	{
-		//System.out.println(data.get("username") + " " + data.get("password")); // -> use if getJson is HashMap<String, String> return type
-		System.out.println(username + " " + password);
-	}
-	
+	//<--- Tests --->
 	@Test(dataProvider = "DataFromExcel", groups = {"NoLogin"})
 	public void ValidateLoginCredentials_NoClickLogin(String username, String password)
 	{
@@ -37,8 +25,15 @@ public class LoginValidationTest extends BaseTest{
 	{
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.Login(username, password);
+		
+		//Checking if user is logged in by confirming if a web element in the Home page is visible.
+		WebElement logo = loginPage.SwagLabsLogoText;
+		loginPage.WaitForElementToBeVisible(logo, 10);
+		Assert.assertTrue(logo.isDisplayed());
 	}
 	
+	
+	//<--- Data Providers --->
 	@DataProvider(name = "BasicLoginData")
 	public Object[][] basicLoginData()
 	{

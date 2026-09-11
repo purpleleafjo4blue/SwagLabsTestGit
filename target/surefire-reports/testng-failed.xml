@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <listeners>
+    <listener class-name="testComponents.Listeners"/>
+  </listeners>
   <test thread-count="5" name="Test(failed)" verbose="0">
+    <groups>
+      <run>
+        <include name="login"/>
+      </run>
+    </groups>
     <classes>
-      <class name="test.EndToEndTest">
+      <class name="test.LoginValidationTest">
         <methods>
-          <include name="sampleEndToEnd"/>
+          <include name="ValidateLoginCredentials" invocation-numbers="1"/>
           <include name="goTo"/>
           <include name="closeBrowser"/>
         </methods>
-      </class> <!-- test.EndToEndTest -->
+      </class> <!-- test.LoginValidationTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
