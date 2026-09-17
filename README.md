@@ -56,4 +56,13 @@ To clean target environments, compile bytecode, and execute the master TestNG su
 mvn clean test -DsuiteXmlFile=testng_master.xml
 ```
 
+---
 
+## 🔄 CI/CD Pipeline Architecture (Jenkins + Webhooks)
+
+This framework is configured for local Continuous Integration testing using a **Jenkins CI Server** paired with automated triggers. 
+
+### Pipeline Trigger Mechanics:
+1. **GitHub Webhook:** A webhook is configured inside the GitHub repository settings to listen for code modifications (e.g., `git push`).
+2. **Secure Tunnel via ngrok:** Since the Jenkins environment resides locally behind a private residential firewall, **ngrok** is deployed to establish a secure public URL tunnel. This enables GitHub's cloud servers to bypass network restrictions and send payloads directly to the local machine (`localhost:8080/github-webhook/`).
+3. **Automated Builds:** Upon intercepting a valid GitHub push payload event, Jenkins automatically wakes up, pulls down the latest code updates, runs the Maven execution lifecycle (`mvn test`), and saves test output reporting metrics.
