@@ -36,7 +36,7 @@ public class BaseTest {
 			browserName = prop.getProperty("browser");
 		}
 		
-		//Initializing the Driver using if else conditions based on GlobalProperties.properties file.
+		//Telling the driver which browser to run based on browserName value in mvn command or GlobalData.properties file.
 		if (browserName.equalsIgnoreCase("edge"))
 		{
 			driver = new EdgeDriver();

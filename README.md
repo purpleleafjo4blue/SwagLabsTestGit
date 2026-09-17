@@ -50,10 +50,36 @@ SwagLabsTest/
 * Java JDK 17
 * Apache Maven (Ensure `mvn` is accessible in your system environment PATH variables)
 
-### Running the Complete Suite via Command Line
-To clean target environments, compile bytecode, and execute the master TestNG suite via Maven, run:
+### Running via Maven Command Line (Profiles & Browsers)
+This framework supports target testing scopes through customized **Maven Profiles** and dynamically injected **Browser System Properties**. 
+
+To run a specific test suite on a specific browser, use the following command structure:
 ```bash
-mvn clean test -DsuiteXmlFile=testng_master.xml
+mvn clean test -P<profileName> -Dbrowser=<browserName>
+```
+
+#### Available Test Profiles (`-P`)
+* **`MasterRunner`** - Executes the full regression suite via `testng_master.xml`
+* **`EndToEnd`** - Executes core user flows via `runners/EndToEndTestXML.xml`
+* **`LoginValidation`** - Executes login boundary tests via `runners/LoginValidationTestXML.xml`
+* **`ItemTest`** - Executes cart manipulation validations via `runners/ItemTestingXML.xml`
+
+#### Available Browsers (`-Dbrowser=`)
+* **`chrome`** - Google Chrome
+* **`firefox`** - Mozilla Firefox
+* **`edge`** - Microsoft Edge
+* **`brave`** - Brave Browser
+* **`opera`** - Opera Browser
+
+#### Execution Examples
+Run the entire regression suite on **Google Chrome**:
+```bash
+mvn clean test -PMasterRunner -Dbrowser=chrome
+```
+
+Run only item-adding workflows on **Mozilla Firefox**:
+```bash
+mvn clean test -PItemTest -Dbrowser=firefox
 ```
 
 ---
