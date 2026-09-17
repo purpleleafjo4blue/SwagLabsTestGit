@@ -15,23 +15,25 @@
 
 
 ## 📂 Project Structure Breakdown
-SwagLabsTest/ -> Main Project
--src/main/java/ 
---pageObjects/ -> Page Object classes encapsulating UI elements and actions
----[pageObjects.java] -> Individual page object classes
----AbstractComponent.java -> Class that has common UI elements accross all other pages that can be reused. Also contains Explicit wait objects.
 
--src/main/resources/
---GlobalData.properties -> Dynamic configuration file (Environment, Browser switches)
-
--src/test/java/
---data/ -> Data-driven resources (DataReader utility, parses .json & .xlsx files)
---test/ -> Test suites 
---testComponents/ -> Framework configurations (BaseTest, Listeners, ExtentReporterNG)
-
--runners -> Modular test execution suites
--testng_master.xml -> Master automation suite runner
--pom.xml -> Maven dependencies and plugin lifecycle declarations
+```text
+SwagLabsTest/
+├── src/main/java/
+│   └── pageObjects/          # Page Object classes encapsulating UI elements and actions
+│       ├── AbstractComponent.java   # Centralized Explicit Wait strategies and generic utilities
+│       └── [PageObjects].java       # Individual page elements (Login, Products, Cart, Checkout)
+├── src/main/resources/
+│   └── GlobalData.properties # Dynamic configuration file (Environment, Browser switches)
+├── src/test/java/
+│   ├── data/                 # Data-driven resources (DataReader utility, .json & .xlsx files)
+│   ├── test/                 # Test suites (EndToEndTest, ItemTesting, LoginValidationTest)
+│   └── testComponents/       # Framework configurations (BaseTest, Listeners, ExtentReporterNG)
+├── TestNG XML files/         # Modular test execution suites
+├── reports/                  # Automatically generated interactive Extent HTML test dashboards
+├── .github/workflows/        # CI/CD orchestration pipeline configuration
+├── testng_master.xml         # Master automation suite runner
+└── pom.xml                   # Maven dependencies and plugin lifecycle declarations
+```
 
 
 ## 🚀 Key Framework Features
