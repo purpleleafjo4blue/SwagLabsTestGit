@@ -1,6 +1,7 @@
 package pageObjects;
 
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -21,7 +22,7 @@ public class AbstractComponent {
 	@FindBy(className = "primary_header")
 	WebElement header;
 	
-	@FindBy(className = "bm-burger-button")
+	@FindBy(id = "react-burger-menu-btn")
 	WebElement burgerButton;
 	
 	@FindBy(className = "shopping_cart_link")
@@ -33,13 +34,22 @@ public class AbstractComponent {
 	@FindBy(className = "app_logo")
 	public WebElement SwagLabsLogoText;
 	
-	public void WaitForElementToBeVisible(WebElement element, int seconds)
+	@FindBy(id = "react-burger-menu-btn")
+	WebElement burgerMenuButton;
+	
+	@FindBy(className = "bm-menu")
+	WebElement burgerMenu;
+	
+	@FindBy(xpath = "//nav[@class = 'bm-item-list']/a")
+	List<WebElement> burgerMenuLinks;
+	
+	public void WaitForElementToBeVisible(WebElement element, long seconds)
 	{
 		wait = new WebDriverWait(driver, Duration.ofSeconds(seconds));
 		wait.until(ExpectedConditions.visibilityOf(element));
 	}
 	
-	public void WaitForElementToBeInvisible(WebElement element, int seconds)
+	public void WaitForElementToBeInvisible(WebElement element, long seconds)
 	{
 		wait = new WebDriverWait(driver, Duration.ofSeconds(seconds));
 		wait.until(ExpectedConditions.invisibilityOf(element));
@@ -47,7 +57,83 @@ public class AbstractComponent {
 	
 	public void click_BurgerButton()
 	{
+		//Click Burger menu button
 		burgerButton.click();
+	}
+	
+	public void burgerButton_AllItems()
+	{
+		//Click Burger menu button
+		burgerButton.click();
+		
+		//After clicking the burger menu button, wait for the burger menu to display first.
+		WaitForElementToBeVisible(burgerMenu, 10);
+		
+		//Among the burger menu links, look for "All Items" link then click on it.
+		for (int i = 0; i<burgerMenuLinks.size(); i++)
+		{
+			WebElement burgerMenuLink = burgerMenuLinks.get(i);
+			if (burgerMenuLink.getText().equals("All Items"))
+			{
+				burgerMenuLink.click();
+			}
+		}
+	}
+	
+	public void burgerButton_About()
+	{
+		burgerButton.click();
+		WaitForElementToBeVisible(burgerMenu, 10);
+		for (int i = 0; i<burgerMenuLinks.size(); i++)
+		{
+			WebElement burgerMenuLink = burgerMenuLinks.get(i);
+			if (burgerMenuLink.getText().equals("About"))
+			{
+				burgerMenuLink.click();
+			}
+		}
+	}
+	
+	public void burgerButton_clickTestAbout()
+	{
+		burgerButton.click();
+		WaitForElementToBeVisible(burgerMenu, 10);
+		for (int i = 0; i<burgerMenuLinks.size(); i++)
+		{
+			WebElement burgerMenuLink = burgerMenuLinks.get(i);
+			if (burgerMenuLink.getText().equals("About"))
+			{
+				burgerMenuLink.click();
+			}
+		}
+	}
+	
+	public void burgerButton_LogOut()
+	{
+		burgerButton.click();
+		WaitForElementToBeVisible(burgerMenu, 10);
+		for (int i = 0; i<burgerMenuLinks.size(); i++)
+		{
+			WebElement burgerMenuLink = burgerMenuLinks.get(i);
+			if (burgerMenuLink.getText().equals("Logout"))
+			{
+				burgerMenuLink.click();
+			}
+		}
+	}
+	
+	public void burgerButton_resetAppState()
+	{
+		burgerButton.click();
+		WaitForElementToBeVisible(burgerMenu, 10);
+		for (int i = 0; i<burgerMenuLinks.size(); i++)
+		{
+			WebElement burgerMenuLink = burgerMenuLinks.get(i);
+			if (burgerMenuLink.getText().equals("Reset App State"))
+			{
+				burgerMenuLink.click();
+			}
+		}
 	}
 	
 	public CartPage click_CartButton()

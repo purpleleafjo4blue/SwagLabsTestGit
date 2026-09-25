@@ -67,7 +67,7 @@ public class BaseTest {
 		
 		//Setting window size and implicit wait
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(7));
 		return driver;
 	}
 	

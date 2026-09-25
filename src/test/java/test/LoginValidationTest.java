@@ -9,6 +9,7 @@ import org.testng.annotations.Test;
 
 import data.DataReader;
 import pageObjects.LoginPage;
+import pageObjects.ProductsPage;
 import testComponents.BaseTest;
 
 public class LoginValidationTest extends BaseTest{
@@ -17,18 +18,19 @@ public class LoginValidationTest extends BaseTest{
 	public void ValidateLoginCredentials_NoClickLogin(String username, String password)
 	{
 		LoginPage loginPage = new LoginPage(driver);
-		loginPage.EnterCredentials(username, password);
+		loginPage.EnterCredentials(username, password); //Check if entered credentials are displaying in the input fields.
 	}
 	
 	@Test(dataProvider = "BasicLoginData", groups= {"login"})
 	public void ValidateLoginCredentials(String username, String password)
 	{
+		//Step 1: Login
 		LoginPage loginPage = new LoginPage(driver);
-		loginPage.Login(username, password);
+		ProductsPage productPage = loginPage.Login(username, password);
 		
-		//Checking if user is logged in by confirming if a web element in the Home page is visible.
-		WebElement logo = loginPage.SwagLabsLogoText;
-		loginPage.WaitForElementToBeVisible(logo, 10);
+		//Step 2: Check if user is logged in by confirming if a web element in the Home page is visible.
+		WebElement logo = productPage.SwagLabsLogoText;
+		productPage.WaitForElementToBeVisible(logo, 10);
 		Assert.assertTrue(logo.isDisplayed());
 	}
 	

@@ -1,5 +1,7 @@
 package pageObjects;
 
+import java.io.IOException;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -22,6 +24,12 @@ public class LoginPage extends AbstractComponent{
 	@FindBy(id = "login-button")
 	WebElement loginButton;
 	
+	@FindBy(id = "login_credentials")
+	public WebElement usernameListElement;
+	
+	@FindBy(className = "login_password")
+	public WebElement passwordListElement;
+	
 	public void testClick_LoginButton()
 	{
 		loginButton.click();
@@ -40,6 +48,4 @@ public class LoginPage extends AbstractComponent{
 		loginButton.click(); //Proceeds from LoginPage to ProductsPage.
 		return new ProductsPage(driver);
 	}
-	
-	
 }

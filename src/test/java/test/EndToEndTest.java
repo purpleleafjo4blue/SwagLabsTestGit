@@ -47,35 +47,59 @@ public class EndToEndTest extends BaseTest{
 				"Sauce Labs Bolt T-Shirt"};
 		List<String> l_ShopList = new ArrayList<String>(Arrays.asList(a_ShopList)); 
 		
+		//Step 1: Login
 		LoginPage loginPage = new LoginPage(driver);
 		ProductsPage productsPage = loginPage.Login("standard_user", "secret_sauce");
+		
+		//Step 2: Select and add multiple items to cart.
 		productsPage.addMultipleItemsToCart(l_ShopList);
+		
+		//Step 3: Click cart button
 		CartPage cartPage = productsPage.click_CartButton();
+		
+		//Step 4: Verify and display item names and prices in console
 		cartPage.confirmItemNamesAndPrices();
+		
+		//Step 5: Click Checkout button.
 		CheckoutInformationPage checkInfoPage = cartPage.Checkout();
+		
+		//Step 6: Enter personal information then click Continue button
 		CheckoutOverviewPage checkoutOverviewPage = checkInfoPage.EnterInformationThenProceed("Alfredo Marquis", "Villegas", "1108");
+		
+		//Step 7: Display overview page of entered personal details then click Finish button.
 		checkoutOverviewPage.Finish();
 	}
 	
 	
 	//<--- Data Providers --->
-		@DataProvider(name = "DataFromJson")
-		public Object[][] dataFromJson() throws IOException
-		{
-			String filePath = System.getProperty("user.dir") + "//src//test//java//Data//Data.json";
-			DataReader dataReader = new DataReader();
-			Object[][] result = dataReader.getJsonData(filePath);
-			// create an Object[][] of size [data.size()][1] and populate via a loop
-			return result;
-			
-		}
+	@DataProvider(name = "BasicLoginData")
+	public Object[][] basicLoginData()
+	{
+		String password = "secret_sauce";
+		return new Object[][] {
+			{"standard_user", password},
+			{"locked_out_user", password},
+			{"problem_user", password}
+		};
+	}
+	
+	@DataProvider(name = "DataFromJson")
+	public Object[][] dataFromJson() throws IOException
+	{
+		String filePath = System.getProperty("user.dir") + "//src//test//java//Data//Data.json";
+		DataReader dataReader = new DataReader();
+		Object[][] result = dataReader.getJsonData(filePath);
+		// create an Object[][] of size [data.size()][1] and populate via a loop
+		return result;
 		
-		@DataProvider(name = "DataFromExcel")
-		public Object[][] dataFromExcel() throws IOException
-		{
-			String filePath = System.getProperty("user.dir") + "//src//test//java//Data//Data.xlsx";
-			DataReader dataReader = new DataReader();
-			Object[][] result = dataReader.getExcelData(filePath, 0);
-			return result;
-		}
+	}
+	
+	@DataProvider(name = "DataFromExcel")
+	public Object[][] dataFromExcel() throws IOException
+	{
+		String filePath = System.getProperty("user.dir") + "//src//test//java//Data//Data.xlsx";
+		DataReader dataReader = new DataReader();
+		Object[][] result = dataReader.getExcelData(filePath, 0);
+		return result;
+	}
 }

@@ -14,14 +14,16 @@ import pageObjects.LoginPage;
 import pageObjects.ProductsPage;
 import testComponents.BaseTest;
 
-public class ItemTesting extends BaseTest{
+public class ItemTest extends BaseTest{
 	//<--- Tests --->
 	@Test
 	public void addItemToCart()
 	{
+		//Step 1: Login
 		LoginPage loginPage = new LoginPage(driver);
-		loginPage.Login("standard_user", "secret_sauce");
-		ProductsPage productsPage = new ProductsPage(driver);
+		ProductsPage productsPage = loginPage.Login("standard_user", "secret_sauce");
+		
+		//Step 2: Add item to cart
 		productsPage.addItemToCart("Sauce Labs Onesie");
 	}
 	
@@ -31,14 +33,27 @@ public class ItemTesting extends BaseTest{
 		String[] a_shopList = {"Sauce Labs Backpack", "Sauce Labs Fleece Jacket"};
 		List<String> l_shopList = new ArrayList<>(Arrays.asList(a_shopList));
 		
+		//Step 1: Login
 		LoginPage loginPage = new LoginPage(driver);
-		loginPage.Login("standard_user", "secret_sauce");
-		ProductsPage productsPage = new ProductsPage(driver);
+		ProductsPage productsPage = loginPage.Login("standard_user", "secret_sauce");
+		
+		//Step 2: Add multiple items to cart
 		productsPage.addMultipleItemsToCart(l_shopList);
 	}
 	
 	
 	//<--- Data Providers --->
+	@DataProvider(name = "BasicLoginData")
+	public Object[][] basicLoginData()
+	{
+		String password = "secret_sauce";
+		return new Object[][] {
+			{"standard_user", password},
+			{"locked_out_user", password},
+			{"problem_user", password}
+		};
+	}
+	
 	@DataProvider(name = "DataFromJson")
 	public Object[][] dataFromJson() throws IOException
 	{

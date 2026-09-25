@@ -3,13 +3,13 @@
 <suite name="Failed suite [Surefire suite]" verbose="0">
   <test thread-count="5" name="Surefire test(failed)" verbose="0">
     <classes>
-      <class name="test.EndToEndTest">
+      <class name="test.LoginValidationTest">
         <methods>
-          <include name="sampleEndToEnd"/>
+          <include name="ValidateLoginCredentials" invocation-numbers="1"/>
           <include name="goTo"/>
           <include name="closeBrowser"/>
         </methods>
-      </class> <!-- test.EndToEndTest -->
+      </class> <!-- test.LoginValidationTest -->
     </classes>
   </test> <!-- Surefire test(failed) -->
 </suite> <!-- Failed suite [Surefire suite] -->

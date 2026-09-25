@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Test.EndToEndTest">
+      <class name="test.BurgerMenuTest">
         <methods>
+          <include name="CheckLink_Logout"/>
           <include name="goTo"/>
-          <include name="sampleEndToEnd"/>
         </methods>
-      </class> <!-- Test.EndToEndTest -->
+      </class> <!-- test.BurgerMenuTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
