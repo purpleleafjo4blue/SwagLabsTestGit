@@ -26,11 +26,10 @@ SwagLabsTest/
 │   └── GlobalData.properties # Dynamic configuration file (Environment, Browser switches)
 ├── src/test/java/
 │   ├── data/                 # Data-driven resources (DataReader utility, .json & .xlsx files)
-│   ├── test/                 # Test suites (EndToEndTest, ItemTesting, LoginValidationTest)
+│   ├── test/                 # Test suites (EndToEndTest, ItemTest, LoginValidationTest, BurgerMenuTest)
 │   └── testComponents/       # Framework configurations (BaseTest, Listeners, ExtentReporterNG)
-├── TestNG XML files/         # Modular test execution suites
+├── runners/         		  # Modular test execution suites (TestNG XML files)
 ├── reports/                  # Automatically generated interactive Extent HTML test dashboards
-├── .github/workflows/        # CI/CD orchestration pipeline configuration
 ├── testng_master.xml         # Master automation suite runner
 └── pom.xml                   # Maven dependencies and plugin lifecycle declarations
 ```
@@ -62,7 +61,8 @@ mvn clean test -P<profileName> -Dbrowser=<browserName>
 * **`MasterRunner`** - Executes the full regression suite via `testng_master.xml`
 * **`EndToEnd`** - Executes core user flows via `runners/EndToEndTestXML.xml`
 * **`LoginValidation`** - Executes login boundary tests via `runners/LoginValidationTestXML.xml`
-* **`ItemTest`** - Executes cart manipulation validations via `runners/ItemTestingXML.xml`
+* **`ItemSelect`** - Executes cart manipulation validations via `runners/ItemTestXML.xml`
+* **`BurgerMenu`** - Executes burger menu tests via `runners/BurgerMenuTestXML.xml`
 
 #### Available Browsers (`-Dbrowser=`)
 * **`chrome`** - Google Chrome
