@@ -15,26 +15,32 @@ import testComponents.BaseTest;
 
 public class BurgerMenuTest extends BaseTest{		
 	//<--- Tests --->
+	
+	//Test 1: Check if clicking the All Items link in the Burger menu will direct the user back to the home page.
 	@Test
 	public void CheckLink_AllItemsList()
 	{
 		//Step 1: Login
+		//Expected result: User should be able to login and be directed to the home page.
 		LoginPage loginPage = new LoginPage(driver);
 		ProductsPage productsPage = loginPage.Login("standard_user", "secret_sauce");
 		
 		//Step 2: Click Add to Cart button
+		//Expected result: User should be directed to the Cart page.
 		productsPage.click_CartButton();
 		
 		//Step 3: Click Burger menu button > Click "All Items" link
-		//Expected: Clicking the "All Items" link should direct the user back to home page.
+		//Expected result: Clicking the "All Items" link should direct the user back to home page.
 		productsPage.burgerButton_AllItems();
 		
-		//Step 4: In the home page, wait for the span title text "Products" and confirm if its displayed in the page.
-		WebElement title = productsPage.spanTitle;
-		productsPage.WaitForElementToBeVisible(title, 10);
-		Assert.assertTrue(title.isDisplayed());
+		//Step 4: Confirm if user is in the home page by confirming that an object in the home page is displayed.
+		//Expected result: Object in the home page is verified 
+		WebElement productPageObject = productsPage.inventoryList;
+		productsPage.WaitForElementToBeVisible(productPageObject, 10);
+		Assert.assertTrue(productPageObject.isDisplayed());
 	}
 	
+	//Test 2: Check if clicking the About link in the Burger menu will direct the user to the About page.
 	@Test
 	public void CheckLink_About()
 	{
@@ -53,6 +59,7 @@ public class BurgerMenuTest extends BaseTest{
 		Assert.assertEquals(driver.getCurrentUrl(), "https://saucelabs.com/");
 	}
 	
+	//Test 3: Check if clicking the Logout link in the Burger menu will log the user out.
 	@Test
 	public void CheckLink_Logout()
 	{
@@ -71,6 +78,7 @@ public class BurgerMenuTest extends BaseTest{
 		Assert.assertTrue(usernameList.isDisplayed());
 	}
 	
+	//Test 2: Check if player can click the Reset App State link in the burger menu.
 	@Test
 	public void CheckResetAppState()
 	{

@@ -16,10 +16,13 @@ import testComponents.BaseTest;
 
 public class ItemTest extends BaseTest{
 	//<--- Tests --->
+	
+	//Test 1: Check if user can add an item to cart.
 	@Test
 	public void addItemToCart()
 	{
 		//Step 1: Login
+		//Expected result: User should be able to login using valid credentials.
 		LoginPage loginPage = new LoginPage(driver);
 		ProductsPage productsPage = loginPage.Login("standard_user", "secret_sauce");
 		
@@ -27,6 +30,7 @@ public class ItemTest extends BaseTest{
 		productsPage.addItemToCart("Sauce Labs Onesie");
 	}
 	
+	//Test 2: Check if user can add multiple items to cart.
 	@Test
 	public void addMultipleItemsToCart()
 	{
@@ -34,6 +38,7 @@ public class ItemTest extends BaseTest{
 		List<String> l_shopList = new ArrayList<>(Arrays.asList(a_shopList));
 		
 		//Step 1: Login
+		//Expected result: User should be able to login using valid credentials.
 		LoginPage loginPage = new LoginPage(driver);
 		ProductsPage productsPage = loginPage.Login("standard_user", "secret_sauce");
 		

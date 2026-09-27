@@ -23,6 +23,9 @@ public class ProductsPage extends AbstractComponent{
 	@FindBy(css = "span.title")
 	public WebElement spanTitle;
 	
+	@FindBy(className = "inventory_list")
+	public WebElement inventoryList;
+	
 	public void addItemToCart(String selectedItem)
 	{
 		for (int i = 0; i<items.size(); i++)

@@ -5,7 +5,7 @@
     <classes>
       <class name="test.BurgerMenuTest">
         <methods>
-          <include name="CheckLink_Logout"/>
+          <include name="CheckLink_AllItemsList"/>
           <include name="goTo"/>
         </methods>
       </class> <!-- test.BurgerMenuTest -->

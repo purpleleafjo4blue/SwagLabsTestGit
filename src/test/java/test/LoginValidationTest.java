@@ -14,17 +14,22 @@ import testComponents.BaseTest;
 
 public class LoginValidationTest extends BaseTest{
 	//<--- Tests --->
+	//Test 1: Check if user can enter credentials in the username and password text fields.
 	@Test(dataProvider = "DataFromExcel", groups = {"NoLogin"})
 	public void ValidateLoginCredentials_NoClickLogin(String username, String password)
 	{
+		//Step 1: Enter credentials in the username and password fields.
+		//Expected result: Entered credentials are displayed in the input fields.
 		LoginPage loginPage = new LoginPage(driver);
-		loginPage.EnterCredentials(username, password); //Check if entered credentials are displaying in the input fields.
+		loginPage.EnterCredentials(username, password); 
 	}
 	
+	//Test 2: Check if user can login using valid credentials.
 	@Test(dataProvider = "BasicLoginData", groups= {"login"})
 	public void ValidateLoginCredentials(String username, String password)
 	{
 		//Step 1: Login
+		//Expected result: User should be able to login using valid credentials.
 		LoginPage loginPage = new LoginPage(driver);
 		ProductsPage productPage = loginPage.Login(username, password);
 		

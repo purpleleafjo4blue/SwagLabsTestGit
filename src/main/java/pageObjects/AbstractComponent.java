@@ -43,6 +43,18 @@ public class AbstractComponent {
 	@FindBy(xpath = "//nav[@class = 'bm-item-list']/a")
 	List<WebElement> burgerMenuLinks;
 	
+	@FindBy(id = "inventory_sidebar_link")
+	WebElement burgerMenuLink_AllItems;
+	
+	@FindBy(id = "about_sidebar_link")
+	WebElement burgerMenuLink_About;
+	
+	@FindBy(id = "logout_sidebar_link")
+	WebElement burgerMenuLink_Logout;
+	
+	@FindBy(id = "reset_sidebar_link")
+	WebElement burgerMenuLink_ResetAppState;
+	
 	public void WaitForElementToBeVisible(WebElement element, long seconds)
 	{
 		wait = new WebDriverWait(driver, Duration.ofSeconds(seconds));
@@ -63,13 +75,18 @@ public class AbstractComponent {
 	
 	public void burgerButton_AllItems()
 	{
+		//Apply wait mechanism for the burger menu button to display in the page first.
+		WaitForElementToBeVisible(burgerButton, 3);
+		
 		//Click Burger menu button
 		burgerButton.click();
 		
-		//After clicking the burger menu button, wait for the burger menu to display first.
+		//After clicking the burger menu button, apply wait mechanism for the burger menu to display in the page first.
 		WaitForElementToBeVisible(burgerMenu, 10);
 		
-		//Among the burger menu links, look for "All Items" link then click on it.
+		//Among the burger menu links, click the "All Items" link.
+		burgerMenuLink_AllItems.click();
+		/* <-- OLD CODE -->
 		for (int i = 0; i<burgerMenuLinks.size(); i++)
 		{
 			WebElement burgerMenuLink = burgerMenuLinks.get(i);
@@ -78,12 +95,23 @@ public class AbstractComponent {
 				burgerMenuLink.click();
 			}
 		}
+		*/
 	}
 	
 	public void burgerButton_About()
 	{
+		//Apply wait mechanism for the burger menu button to display in the page first.
+		WaitForElementToBeVisible(burgerButton, 3);
+		
+		//Click Burger menu button
 		burgerButton.click();
+		
+		//After clicking the burger menu button, apply wait mechanism for the burger menu to display in the page first.
 		WaitForElementToBeVisible(burgerMenu, 10);
+		
+		//Among the burger menu links, click the "About" link.
+		burgerMenuLink_About.click();
+		/* <-- OLD CODE -->
 		for (int i = 0; i<burgerMenuLinks.size(); i++)
 		{
 			WebElement burgerMenuLink = burgerMenuLinks.get(i);
@@ -92,26 +120,23 @@ public class AbstractComponent {
 				burgerMenuLink.click();
 			}
 		}
-	}
-	
-	public void burgerButton_clickTestAbout()
-	{
-		burgerButton.click();
-		WaitForElementToBeVisible(burgerMenu, 10);
-		for (int i = 0; i<burgerMenuLinks.size(); i++)
-		{
-			WebElement burgerMenuLink = burgerMenuLinks.get(i);
-			if (burgerMenuLink.getText().equals("About"))
-			{
-				burgerMenuLink.click();
-			}
-		}
+		*/
 	}
 	
 	public void burgerButton_LogOut()
 	{
+		//Apply wait mechanism for the burger menu button to display in the page first.
+		WaitForElementToBeVisible(burgerButton, 3);
+		
+		//Click Burger menu button
 		burgerButton.click();
+		
+		//After clicking the burger menu button, apply wait mechanism for the burger menu to display in the page first.
 		WaitForElementToBeVisible(burgerMenu, 10);
+		
+		//Among the burger menu links, click the "Logout" link.
+		burgerMenuLink_Logout.click();
+		/* <-- OLD CODE -->
 		for (int i = 0; i<burgerMenuLinks.size(); i++)
 		{
 			WebElement burgerMenuLink = burgerMenuLinks.get(i);
@@ -120,12 +145,23 @@ public class AbstractComponent {
 				burgerMenuLink.click();
 			}
 		}
+		*/
 	}
 	
 	public void burgerButton_resetAppState()
 	{
+		//Apply wait mechanism for the burger menu button to display in the page first.
+		WaitForElementToBeVisible(burgerButton, 3);
+				
+		//Click Burger menu button
 		burgerButton.click();
+		
+		//After clicking the burger menu button, apply wait mechanism for the burger menu to display in the page first.
 		WaitForElementToBeVisible(burgerMenu, 10);
+		
+		//Among the burger menu links, click the "Reset App state" link.
+		burgerMenuLink_ResetAppState.click();
+		/* <-- OLD CODE -->
 		for (int i = 0; i<burgerMenuLinks.size(); i++)
 		{
 			WebElement burgerMenuLink = burgerMenuLinks.get(i);
@@ -134,11 +170,16 @@ public class AbstractComponent {
 				burgerMenuLink.click();
 			}
 		}
+		*/
 	}
 	
 	public CartPage click_CartButton()
 	{
-		cartButton.click(); //proceeds to the CartPage
+		//Click the Cart Page. 
+		//Expected result: User is directed to the Cart page.
+		cartButton.click();
+		
+		//This method creates a new CartPage object.
 		return new CartPage(driver);
 	}
 	
