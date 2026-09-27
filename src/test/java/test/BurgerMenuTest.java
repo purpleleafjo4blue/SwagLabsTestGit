@@ -78,7 +78,7 @@ public class BurgerMenuTest extends BaseTest{
 		Assert.assertTrue(usernameList.isDisplayed());
 	}
 	
-	//Test 2: Check if player can click the Reset App State link in the burger menu.
+	//Test 4: Check if player can click the Reset App State link in the burger menu.
 	@Test
 	public void CheckResetAppState()
 	{
